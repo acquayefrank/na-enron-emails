@@ -1,28 +1,69 @@
+%!TEX TS-program = xelatex
 \documentclass{beamer}
 
-% \usepackage{beamerthemesplit} // Activate for custom appearance
+\usepackage{HSE-theme/beamerthemeHSE-en} % Load HSE theme
 
-\title{Network Analysis of Emails Sent Within Enron}
-\author{Frank Acquaye}
+%%% Fonts 
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}
+\setmainfont[Ligatures={TeX,Historic}]{Myriad Pro} % install Myriad Pro or replace with Arial
+\setsansfont{Myriad Pro}  % install Myriad Pro or replace with Arial
+\setmonofont{Courier New}
+
+\usepackage{multicol} 		% Multiple columns
+\graphicspath{{images/}}  	% Images folder
+
+%%% Author and speech
+\title[Short title]{Network Science Project 1} 
+\subtitle{ Network Analysis of Emails Sent Within Enron}
+\author[Frank Acquaye]{Presented By \\ \smallskip \scriptsize \url{fakvey@edu.hse.ru}\\\url{http://acquayefrank.github.io/}}
+\institute[Higher School of Economics]{National Research University \\ Higher School of Economics (Moscow)}
 \date{\today}
 
-\begin{document}
+\begin{document}	% Document begins
 
-\frame{\titlepage}
+\frame[plain]{\titlepage}	% Title frame
 
-\section[Outline]{}
-\frame{\tableofcontents}
+%\section{Just some text}
+%\subsection{Subtitle}
 
-\section{Introduction}
-\subsection{Overview of the Beamer Class}
-\frame
-{
-  \frametitle{Features of the Beamer Class}
+\begin{frame}
+\frametitle{Network Summary}
+	\begin{multicols}{2}
+		\includegraphics[width=\columnwidth]{na-ee-graph-final.png}
+		\columnbreak
 
-  \begin{itemize}
-  \item<1-> Normal LaTeX class.
-  \item<2-> Easy overlays.
-  \item<3-> No external programs needed.      
-  \end{itemize}
-}
+		\begin{enumerate} 
+			\item \textbf{Nodes/Order:} 36692
+			\item \textbf{Edges/Size:} 183831
+			\item \textbf{Radius:} 7
+			\item \textbf{Diameter:} 13		
+			\item \textbf{Transitivity:}  0.085
+			\item \textbf{Clustering Co-efficient:} 0.497
+		\end{enumerate} 
+	\end{multicols}
+\end{frame}
+
+
+
+\begin{frame}[c]
+\begin{center}
+\frametitle{\LARGE Thank you for your attention!}
+
+{\LARGE \inserttitle}
+
+\bigskip
+
+{\insertauthor} 
+
+\bigskip\bigskip
+
+{\insertinstitute}
+
+\bigskip\bigskip
+
+{\large \insertdate}
+\end{center}
+\end{frame}
+
 \end{document}

@@ -7,10 +7,13 @@
 									% TeX will automatically convert eps --> pdf in pdflatex		
 	\usepackage{amssymb}
 	
-	%SetFonts
+	\usepackage{hyperref}
+	\usepackage{caption}
 	
 	%SetFonts
 	
+	%SetFonts
+	\graphicspath{{images/}}  	% Images folder
 	
 	\title{Network Analysis of Emails Sent Within Enron}
 	\author{Frank Acquaye}
@@ -21,7 +24,74 @@
 	
 	\section{Network Summary}
 	\subsection{Data Source}
+	I wanted to explore the network structure of emails sent within \href{https://en.wikipedia.org/wiki/Enron}{Enron}. I used preprocessed data from  \href{http://snap.stanford.edu/data/email-Enron.html}{SNAP}.
+	\subsection{Summary Statistics of Enron Emails}
+	\emph{Table 1} shows the summary statistics of Enron Emails Network. \\
+	\\
+	\emph{Figure 1} shows degree distribution \\
+	\emph{Figure 2} shows a visualisation of the network using the Force Atlas 2 Algorithm. \\
+	\emph{Figure 3} shows a visualisation of the network using the Force Atlas 2 Algorithm with node and edge colouring. \\
+	\emph{Figure 4} shows a visualisation of the network using the Yifan Hu Algorithm. \\
+	\\
+	\par
+	Upon inspection one realises a huge cluster within the centre of all visualisations and less connections in the extremities. It's my perception that these clusters are mostly key stakeholders in Enron and perhaps top management within Enron. Since the data used was not labelled this might be a bit hard to confirm.
+	\begin{center}
+ \begin{tabular}{||p{12cm}||p{5cm}|}
+\hline 
+\textbf{Statistic Name} & \textbf{Value} \\ \hline
+ \textbf{Nodes/Order} & 36692  \\  
+ \hline
+ \textbf{Edges/Sizer} & 183831  \\  
+ \hline
+ \textbf{Max Degree} & 1383\\  
+ \hline
+ \textbf{Min Degree} & 1\\  
+ \hline
+ \textbf{Mean Degree} & 10.020\\  
+ \hline
+ \textbf{Number of Connected Components} & 1065\\  
+ \hline
+  \textbf{Radius} & 7\\  
+ \hline
+ \textbf{Diameter} & 13\\  
+ \hline
+ \textbf{Clustering Co-efficient} & 0.497\\  
+ \hline
+ \hline
+ \textbf{Order of largest connected component} & 33696\\  
+ \hline
+ \textbf{Size of largest connected component} & 180811\\  
+ \hline
+ \textbf{Ratio of Size of entire Graph to Connected Component} & 0.983\\  
+ \hline
+ \textbf{Ratio of Order of entire Graph to Connected Component} & 0.918\\  
+ \hline
+ \textbf{Total Number of traingles} & 727044.0\\  
+ \hline
+\end{tabular}
+\captionof{table}{Summary Statistics for Enron Emails Network}\label{summarystats}
 
-	
-	
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{degree-distribution.png}
+  \caption{Degree Distribbution }
+\end{figure}
+
+\end{center} 
+		\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{enron-force-atlas-2.png}
+  \caption{Network Structure of Enron Emails using Force Atlas 2 }
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{enron-graphs.png}
+  \caption{Network Structure of Enron Emails using Force Atlas 2  with colouring}
+\end{figure}
+
+	\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{na-ee-graph-final.png}
+  \caption{Network Structure of Enron Emails using Yifan Hu }
+\end{figure}
 	\end{document}  

@@ -10,4 +10,4 @@ Presentation files can be found in presentation folder.
 
 ### Report
 
-Report can be found in the presentation folder.
+Report can be found in the report folder. It contains additional information about the project.

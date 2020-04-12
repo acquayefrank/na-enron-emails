@@ -32,6 +32,8 @@
 	\emph{Figure 2} shows a visualisation of the network using the Force Atlas 2 Algorithm. \\
 	\emph{Figure 3} shows a visualisation of the network using the Force Atlas 2 Algorithm with node and edge colouring. \\
 	\emph{Figure 4} shows a visualisation of the network using the Yifan Hu Algorithm. \\
+	\emph{Figure 5} shows a visualisation of the network communities. \\
+	\emph{Figure 6} shows a visualisation of the network communities according to the first 250 nodes of the network according to the page-rank algorithm.\\
 	\\
 	\par
 	Upon inspection one realises a huge cluster within the centre of all visualisations and less connections in the extremities. It's my perception that these clusters are mostly key stakeholders in Enron and perhaps top management within Enron. Since the data used was not labelled this might be a bit hard to confirm.
@@ -99,4 +101,22 @@
 
 \section{Network Structure}
 Owing to the huge nature of the network most network, the assortative matrix was computed using a subgraph obtained from the first 250 nodes of the network according to the page-rank algorithm.
+
+\pagebreak
+
+\section{Community Detection}
+The image in \emph{Figure 5} is  incomprehensible hence I used the first 250 nodes of the network according to the page-rank algorithm.
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{communities.png}
+  \caption{ Communities in Enron Emails Network}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{communities-page-rank.png}
+  \caption{ Communities in Top 250 Enron Emails Network According to Page Rank}
+\end{figure}
+
+
 \end{document}  
